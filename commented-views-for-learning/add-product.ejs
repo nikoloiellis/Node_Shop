@@ -1,0 +1,23 @@
+
+<!-- EJS does not have layouts, instead you have includes to be imported anytime 
+the include keyword then the sub folder link without / or ./
+Something to note you can use the = sign but it renders it as texts -->
+<%- include('includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+   <%- include('includes/navigation.ejs') %>
+
+    <main>
+        <form class="product-form" action="/admin/add-product" method="POST">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+            </div>
+
+            <button class="btn" type="submit">Add Product</button>
+        </form>
+    </main>
+<%- include('includes/end.ejs') %>
